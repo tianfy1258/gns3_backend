@@ -50,6 +50,15 @@ urlpatterns = [
     path('login', login),
     path('logout', logout),
     path('validToken', valid_token),
+    path('allprojects', all_projects),
+    path('project', ops_for_project),
+    path('node', ops_for_node),
+    path('start', start_node),
+    path('stop', stop_node),
+    path('startall', start_all_nodes),
+    path('stopall', stop_all_nodes),
+    path('link', ops_for_link),
+    path('telnet', do_telnet)
 
     # 数据库查询相关, 名称为 get{ModelName}, 例如getDataset
     *database_query,

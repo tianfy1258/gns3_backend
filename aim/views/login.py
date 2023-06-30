@@ -4,7 +4,7 @@ import time
 
 
 
-def login(request):
+def login(request : HttpRequest):
     if request.method == 'POST':
         req = json.loads(request.body)
 
@@ -43,7 +43,7 @@ def login(request):
             return error_response(response, "用户名或密码错误")
 
 
-def logout(request):
+def logout(request : HttpRequest):
     request.session.clear()
     response = {}
     return success_response(response)
